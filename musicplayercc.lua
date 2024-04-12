@@ -101,7 +101,6 @@ local currentPosition = 1
 local playbackStarted = false
 local trackStartTime = 0
 local backPressedOnce = false
-local basalt = require("basalt")
 local breakit = false
 local main = basalt.createFrame()
 
