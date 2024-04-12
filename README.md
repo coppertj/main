@@ -1,31 +1,31 @@
-MusicPlayerCC
-
+# MusicPlayerCC
 
 MusicPlayerCC is an open-source music player designed for ComputerCraft, leveraging the Lua programming language to bring a versatile and user-friendly audio experience to Minecraft. This project is currently in a proof of concept stage, demonstrating core functionalities such as file browsing, audio playback, and dynamic user interface elements. I believe in the potential of MusicPlayerCC to evolve significantly through community involvement and contributions.
 
-Features:
+## Features
 
-    Audio playback from in-game computers (targeted computer is the ADVANCED noisy portable computer)
-    File system browsing within the game
-    Shuffle and repeat functionalities
-    User-configurable settings for performance optimization
-    Extensible design for future features and improvements
+- Audio playback from in-game computers (targeted computer is the ADVANCED noisy portable computer)
+- File system browsing within the game
+- Shuffle and repeat functionalities
+- User-configurable settings for performance optimization
+- Extensible design for future features and improvements
 
-Prerequisites:
+## Prerequisites
 
-    Minecraft with the ComputerCraft mod installed
-    Internet access within the game to download the MusicPlayerCC files
-    Computercraft server config setup correctly for HTML support and file upload support.
-    Music files in the DFPWM format (I recommend https://music.madefor.cc/ for converting)
+- Minecraft with the ComputerCraft mod installed
+- Internet access within the game to download the MusicPlayerCC files
+- Computercraft server config setup correctly for HTML support and file upload support.
+- Music files in the DFPWM format (I recommend https://music.madefor.cc/ for converting)
 
-Installation:
+## Installation
 
-    Start by opening your in-game computer terminal.
-    Use the following command to install MusicPlayerCC: wget https://raw.githubusercontent.com/coppertj/main/main/musicplayercc.lua <file name>
-    For the file name I recommend startup if it's a standalone device like a Advanced Noisy Pocket Computer. To utilize the Basalt API it does have to atleast be a advanced computer.
-    Run the Program and it will auto install the Basalt API aswell as create the music folder and a config file (that is currently useless as this is a proof of concept release)
+1. Start by opening your in-game computer terminal.
+2. Use the following command to install MusicPlayerCC: `wget https://raw.githubusercontent.com/coppertj/main/main/musicplayercc.lua <file name>`
+>[!IMPORTANT]
+> For the file name I recommend `startup` if it's a standalone device like an Advanced Noisy Pocket Computer. To utilize the Basalt API it does have to atleast be an Advanced Computer.
+4. Run the Program and it will auto install the Basalt API aswell as create the music folder and a config file (that is currently useless as this is a proof of concept release)
 
-How to Use
+## How to Use
 
 After running the program for the first time for its initial setup you are going to want to navigate to the music folder using "cd music". Once you are in the music folder directory that is the program's root directory that it will search for music. 
 
@@ -37,47 +37,40 @@ To upload sound files computercraft supports drag and dropping into the minecraf
 
 Once you have the files uploaded you just go back to the root folder and run the program, the GUI file explorer inside the program will handle the rest for you. Just select the file you want to play first and the rest should be self explanatory. To return to the file explorer press the = button on the top left of the player.
 
-
 I warmly welcome contributions from the community. Whether you're fixing bugs, adding new features, improving the documentation, or sharing ideas, your help is invaluable as I am just one person.
 
-Future Features:
+## Future Features
 
--Open Noteblock Studio support
+- Open Noteblock Studio support
+- Actual sound visualizer
+- Metadata creation for track order per folder/subfolder
+- Global shuffle that will play the entire music folder and subfolders
+- Options menu for buffer size (improves audio quality/performance at the cost of accurate pause/skip/repeat button detection)
 
--Actual sound visualizer
+> [!NOTE]
+> the buffer size is set to 1024*16 currently for max performance reasons, you can adjust this at line 404 to be lower if you want accurate pausing at the cost of audio glitches/the progressively louder audio bug.
 
--Metadata creation for track order per folder/subfolder
+- HTML streaming from webserver
+- More refined file explorer GUI
 
--Global shuffle that will play the entire music folder and subfolders
+## Known Bugs
 
--Options menu for buffer size (improves audio quality/performance at the cost of accurate pause/skip/repeat button detection)
+- When computer is under intense load music will get louder and louder as it lags. This could be linked to server performance or unoptimized code, could also be linked to the buffer size. (This is only a proof of concept this initial version).
 
-NOTE: the buffer size is set to 1024*16 currently for max performance reasons, you can adjust this at line 404 to be lower if you want accurate pausing at the cost of audio glitches/the progressively louder audio bug.
-
--HTML streaming from webserver
-
--More refined file explorer GUI
-
-
-Known Bugs:
-
--When computer is under intense load music will get louder and louder as it lags. This could be linked to server performance or unoptimized code, could also be linked to the buffer size. (This is only a proof of concept this initial version).
-
-
+## License
 
 This project is licensed under the GNU General Public License v3.0 - see the LICENSE file for details. This ensures that the project remains free and open-source, allowing anyone to modify and distribute their versions as long as they don't profit from it commercially.
 
-Acknowledgments:
+## Acknowledgments
 
-    Thanks to the ComputerCraft community for their invaluable resources and support aswell as the Basalt team for their amazing API!
-    Special thanks to all contributors and future contributors who help improve MusicPlayerCC.
+Thanks to the ComputerCraft community for their invaluable resources and support aswell as the Basalt team for their amazing API!
+Special thanks to all contributors and future contributors who help improve MusicPlayerCC.
 
-Contact:
+## Contact
 
 For questions, suggestions, or collaborations, please open an issue in the GitHub repository or contact me directly on discord (username coppertj)
 
-
-Pictures:
+## Pictures
 
 ![Player](https://github.com/coppertj/main/blob/main/player.png?raw=true "Player")
 
